@@ -1,0 +1,32 @@
+Old stuff for compile and test, adjust for new repository
+
+javac -d bin src/gamesleague/*.java
+
+java -cp bin gamesleague.Test
+
+For Testing use:
+
+javac -d bin -cp bin ./TestOperation/*.java 
+
+Change 'TestOperationApp' to whatever test file you want to run:
+
+java -cp bin TestOperationApp 
+
+commands for compile and run phil test:
+
+javac -d bin src/gamesleague/*.java
+javac -d bin -cp bin ./TestOperation/*.java 
+java -cp bin TestOperationApp 
+
+Phills versions, the y only work in  the code spaces: 
+
+javac -d bin -cp bin ./src/gamesleague/*.java
+javac -cp bin ./TestOperation/*.java 
+java -cp bin:TestOperation TestOperationApp
+
+new commands to make jar and run:
+
+javac -d bin -cp bin ./src/gamesleague/*.java
+javac -cp bin ./TestOperation/*.java 
+jar cvf build/gamesleague.jar -C bin . 
+java -cp ./build/gamesleague.jar:TestOperation TestOperationApp
